@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import "./varebies";
+@import "./reset";
+
+body {
+  font-family: $font-family;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #0a0c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  .container {
+    width: 100%;
+    max-width: 1110px;
+    border-radius: 8px;
+    box-shadow: 0 20px 20px -10px rgba(23, 25, 41, 0.2);
+    background: #1b1937;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: minmax(327px, 570px) minmax(327px, 540px);
+    .info {
+      padding: 71px 95px 59px 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+      .discription {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 570px;
+        h1 {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 122%;
+          color: #fff;
+          span {
+            color: #ab5cdb;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 167%;
+          color: #fff;
+          opacity: 0.75;
+        }
+      }
+      .account-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        div {
+          h2 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+          }
+          p {
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 208%;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 540px;
+      min-width: 400px;
+      min-height: 426px;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .wrapper {
+    padding: 88px 24px;
+    height: 100%;
+    .container {
+      flex-direction: column-reverse;
+      .info {
+        padding: 40px 32px 32px 31px;
+        .discription {
+          max-width: 850px;
+          gap: 16px;
+          text-align: center;
+          align-items: center;
+          h1 {
+            font-size: 28px;
+            line-height: 114%;
+          }
+        }
+        .account-info {
+          justify-content: center;
+          div {
+            max-width: 264px;
+            min-width: 200px;
+            height: 56px;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        max-width: 860px;
+        min-width: 327px;
+        border-radius: 8px 8px 0 0;
+        min-height: 240px;
+      }
+    }
+  }
+}
